@@ -8,7 +8,8 @@ import "CGSPrivate"
         AXUIElementCopyAttributeValue(element, #AXRole, rolePtr = TQPointer toObject)
         klass = rolePtr value case: {
             #AXApplication => `AccessibilityApplication`,
-            #AXWindow      => `AccessibilityWindow`
+            #AXWindow      => `AccessibilityWindow`,
+            #AXTextField   => `AccessibilityWindow`
         } default: `AccessibilityElement`
         ^klass new setAxElement: element; self
     }
