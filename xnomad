@@ -9,6 +9,7 @@ wm = WindowManager new
     setWindowsInMaster: 1;
             \ See Layouts.tq for additional ones
             setLayouts: [MultiColLayout new,
+	    		 MultiColLayout new setHorizontallyFlipped: yes; self,
                          TallLayout new,
                          WideLayout new,
                          FullscreenLayout new];
